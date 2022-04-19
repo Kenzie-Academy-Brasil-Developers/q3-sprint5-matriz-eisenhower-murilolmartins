@@ -37,7 +37,7 @@ class TaskModel(db.Model):
             return value.lower()
         if key == "importance" or key == "urgency":
             if not type(value) == int:
-                raise TypeError("Importance and urgency needs to be an integer")
+                raise TypeError
             if value != 1 and value != 2:
                 raise ValueError
             return value
